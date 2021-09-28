@@ -68,8 +68,8 @@ func TestLowerWrapAroundAlphabet(t *testing.T) {
 }
 
 func TestUpperWrapAroundAlphabet(t *testing.T) {
-    input_value        := "uvwxyza"
-    expected_result    := "wxyzabc"
+    input_value        := "UVWXYZA"
+    expected_result    := "WXYZABC"
     actual_result, err := convert_string(input_value)
     if expected_result != actual_result || err != nil {
         t.Fatalf(`Input: "%v", Expected: "%v", Actual "%v"`, input_value, expected_result, actual_result)
