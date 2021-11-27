@@ -47,9 +47,16 @@ func main() {
     }
 
     res, err := find_unique_characters(strings.Join(lines,""))
+    letters := make(map[string]int)
     for k, v := range res {
         if v == 1 {
-            fmt.Println(k)
+            letters[k] = v
+        }
+    }
+
+    for _, i := range strings.Join(lines,"") {
+        if _, ok := letters[string(i)]; ok {
+            fmt.Println(string(i))
         }
     }
 }
