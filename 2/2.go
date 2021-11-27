@@ -15,7 +15,6 @@ func convert_string(input string) (string, error) {
                 continue
             } else {
                 result += fmt.Sprintf("%s", string(rune(((int(i) - 'A' + 2) % 26) + 'A')))
-
             }
         } else {
             result     += fmt.Sprintf("%s", string(rune(((int(i) - 'a' + 2) % 26) + 'a')))
