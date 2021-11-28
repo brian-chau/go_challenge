@@ -35,8 +35,8 @@ func main() {
         log.Fatalf("Could not handle filename!")
     }
 
-    re := regexp.MustCompile(`[^A-Z][A-Z]{3}([a-z]{1})[A-Z]{3}[^A-Z]`)
-    res := re.FindAllStringSubmatch(strings.Join(lines,""),-1)
+    pattern := regexp.MustCompile(`[^A-Z][A-Z]{3}([a-z]{1})[A-Z]{3}[^A-Z]`)
+    res := pattern.FindAllStringSubmatch(strings.Join(lines,""),-1)
     for _, i := range res {
         fmt.Printf("%s", i[1])
     }
